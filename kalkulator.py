@@ -38,6 +38,8 @@ def print_answers():
     return None
 
 def wybrana_metoda():
+    if zmienna3.get() == "":
+          message3.config(text="Wybierz co chcesz zrobić z liczba")
     if zmienna3.get() == "+":
      sumation = zmienna1.get() + zmienna2.get()
      message3.config(text="Oto liczba twoja " + str(sumation))
@@ -47,8 +49,16 @@ def wybrana_metoda():
     elif zmienna3.get() == "*":
      sumation = zmienna1.get() * zmienna2.get()
      message3.config(text="Oto liczba twoja " + str(sumation))
+    elif zmienna3.get() =="/" and zmienna2.get() ==0:
+        message3.config(text="OK, nie dziel przez zero")
+
     elif zmienna3.get() == "/":
+        
      sumation = zmienna1.get() / zmienna2.get()
+     
+     
+     
+
      message3.config(text="Oto liczba twoja " + str(sumation))
 
     
